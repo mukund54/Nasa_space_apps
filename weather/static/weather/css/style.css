@@ -1,0 +1,72 @@
+
+#name {
+  color: white;
+  size: 2em;
+  text-decoration: bold;
+}
+.recommend {
+  position: absolute;
+  top: 200px;
+  left:200px;
+}
+.item {
+  color: rgb(255,255,255);
+}
+.reading {
+  position: absolute;
+  right: 50px;
+  top: 200px;
+  background-color: rgba(222, 167, 12, 1);
+  font-size: 25;
+  color: rgb(0,0,0);
+  width: 130px;
+  height: 130px;
+  border-color: rgb(0,100,200);
+}
+div.scrollmenu {
+    background-color: rgba(255,255,255,1);
+    background-image: linear-gradient(to right,#00001E,rgba(50,50,50,0.5),rgba(50,50,50,0.5),#00001E);
+    overflow: auto;
+    white-space: nowrap;
+    position: absolute;
+    left: 300px;
+    bottom: 0px;
+}
+.sn {
+  position: absolute;
+  right:100px;
+  top: 100px;
+}
+.btn {
+  margin: 5px;
+  background-color: rgba(255,255,255,0);
+  color: rgba(0,0,0,1);
+  font-weight: 900;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  border-color: rgb(0,0,0);
+  background-image: url('../res/err.jpg');
+  background-size: cover;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-size: 54px;
+}
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+header#pageheader {
+  line-height: 96px;
+  padding-left: 24px;
+}
+/*1d8bf2893f9b708a4dbd6b511a8a7129*/

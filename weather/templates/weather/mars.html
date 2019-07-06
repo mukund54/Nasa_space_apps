@@ -1,0 +1,265 @@
+<html>
+<head>
+
+	<title>Solarizer - Mars</title>
+	{% load staticfiles %}
+	<link rel="shortcut icon" type="image/png" href="{% static 'weather/res/favicon.ico' %}"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{% static 'weather/css/toolkit-startup.css' %}" rel="stylesheet">
+
+      <link href="{% static 'weather/css/application-startup.css' %}" rel="stylesheet"><link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="stage" id="stage">
+
+	<div class="block block-inverse block-fill-height app-header"
+	     style="background-image: url({% static 'weather/res/mars.jpg' %});">
+
+	  <div class="container py-4 fixed-top app-navbar">
+	  <nav class="navbar navbar-transparent navbar-padded navbar-toggleable-sm">
+	    <button
+	      class="navbar-toggler navbar-toggler-right hidden-md-up"
+	      type="button"
+	      data-target="#stage"
+	      data-toggle="stage"
+	      data-distance="-250">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+
+	    <a class="navbar-brand mr-auto" href="">
+
+	      <strong style= "text-decoration-color: white; font-size: 1.5em; padding: 12px; border-radius: 4px">Solarizer</strong>
+	    </a>
+
+	     <div class="hidden-sm-down text-uppercase">
+      <ul class="navbar-nav">
+        <li class="nav-item px-1 ">
+          <a class="nav-link" href="{% url 'weather:index' %}">Home</a>
+        </li>
+        <li class="nav-item px-1 ">
+          <a class="nav-link" href="{% url 'weather:earth' %}">Earth (NREL)</a>
+        </li>
+        <li class="nav-item px-1 ">
+          <a class="nav-link" href="{% url 'weather:mars' %}">Mars (HI-SEAS)</a>
+        </li>
+        <li class="nav-item px-1 ">
+          <a class="nav-link" href="{% url 'weather:references' %}">References</a>
+        </li>
+
+      </ul>
+    </div>
+	  </nav>
+	</div>
+
+	  <div class="block-xs-middle pb-5">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-sm-10 col-lg-6">
+	          <h1 class="block-titleData frequency">Solar solutions on demand</h1>
+	          <p class="lead mb-4 text-muted">Stop installing bloated scripts that all track the exact same things. Install one that does everything.</p>
+	          <p><h1>Now for Martians!</h1></p>
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+</div>
+
+<br>
+
+<div class="block block-secondary app-iphone-block">
+  <div class="container">
+    <div class="row app-align-center">
+
+      <div class="col-md-8 hidden-sm-down">
+        <img class="app-iphone" src="{% static 'weather/res/rover.jpg' %}" style="width: 700px; height: 400px">
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="text-secondary text-uppercase">Solar rover on Mars</h6>
+        <h3>This is the means of transport on mars and it also consumes the most energy!</h3>
+        <p class="lead mb-4"></p>
+    </div>
+</div>
+
+<div class="block block-secondary app-iphone-block">
+  <div class="container">
+    <div class="row app-align-center">
+
+      <div class="col-md-8 hidden-sm-down">
+        <img class="app-iphone" src="{% static 'weather/res/station.png' %}" style="width: 625px; height: 225px">
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="text-secondary text-uppercase">Oxygen Chamber</h6>
+        <h3>Your life revolves around this mini-world. It is a simulation of Earth on Mars. You've got to give it the most power.</h3>
+        <p class="lead mb-4"></p>
+    </div>
+</div>
+		<br><br>
+		<div class="container-fluid col-md-12">
+
+				<img src="{% static 'weather/res/timeline.png' %}">
+		</div>
+		<br><br>
+		<section id="first-step" class="step content-100">
+			<div class="container">
+				<h1 class="text-center section-heading">Solar on <mark class='mark-style'>Mars</mark>?</h1>
+				<hr class="tall">
+				<div class="margin-top25">
+					<div class="row">
+
+						<div class="col-md-12 area step1">
+
+
+							<div class="right text-center">
+								<form>
+									<div class="container">
+										<p class="text-dark form-style">Number of rovers: </p>
+										<input id="householdBDs" type="number" required value="3" min="1" max="8">
+										<span>Mars-Rovers</span>
+									</div>
+									<br>
+									<div class="container">
+										<p class="form-style">Oxygen chamber size (bedrooms)</p>
+										<input id="householdBDs" type="number" required value="3" min="1" max="8">
+										<span>Rooms</span>
+									</div>
+									<div class="submit-button">
+									<br>
+										<button id="calculate" class="btn"> <a href="#second-step" class="button glow-button">Calculate</a>
+
+									</div>
+
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class='bottom-space'>
+				</div>
+			</div>
+		</section>
+		<br><br>
+		<section id="second-step" class="step content-100">
+			<div class="container">
+				<h1 class="text-center section-heading">What you need to go solar</h1>
+				<hr class="tall">
+				<p class="text-center section-content">
+					Based on your location and household size our ML model recommends:
+				</p>
+				<div class="container-fluid col-md-12 text-center">
+				<br>
+				<img src="{% static 'weather/res/volt_panels.png' %}">
+				<br><br>
+				</div>
+				<div class="margin-top25">
+					<div class="row">
+						<div class="col-md-12 area step1 text-center">
+							<div class="right">
+								<form id="apply-form">
+									<div class="group has-value">
+										<p class="form-style">Solar panel size (sqm)</p>
+										<input id="panelSize" type="text" required value="25">
+										<br><br>
+									</div>
+									<div class="group has-value">
+										<p class="form-style">Battery Packs</p>
+										<input id="batteryPacks" type="text" required value="2">
+
+										<br><br>
+									</div>
+
+									<div class="group has-value">
+									    <p class="form-style">Total investment (INR)</p>
+										<input id="investment" type="text" required value="30.000">
+										<br><br>
+									</div>
+									<div class="group has-value">
+										<p class="form-style">Return of investment from electricity savings</p>
+										<input id="returnOfInvestment" type="text" required value="8 years">
+										<br><br>
+									</div>
+									<div class="submit-button">
+										<br>
+										<button class="btn" id="tips"><a class="button glow-button" href="#final">Solar energy tips</a>
+										</button>
+									</div>
+									<div id="solution">
+
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class='bottom-space'>
+				</div>
+			</div>
+		</section>
+
+	<script src="{% static 'weather/scripts/jquery.min.js' %}"></script>
+	<script>
+		var val = 0;
+	</script>
+	<script>
+		$('#calculate').click(function(e){
+
+			var batteryCapacity = 12; // kWh
+			var batteryPrice = 6000; // USD
+			var sunPerDay = 5; // h
+			var panelGeneration = 0.15 // kWh
+			var generatePrice = 0.3 // USD/W
+
+			var bdInKw = 27.2586; // get from location
+			var electricityPrice = 0.12 // USD/kWh
+
+			var householdBDs = $('#householdBDs').val();
+			var location = $('#location').val();
+
+			var consume = householdBDs * bdInKw;
+			var batteries = Math.floor(consume / batteryCapacity);
+			$('#batteryPacks').val(batteries);
+			val = batteries;
+
+			var generateCapacity = consume / sunPerDay;
+
+			var panelSize = generateCapacity / panelGeneration
+			$('#panelSize').val(panelSize);
+
+			var investment = batteries * batteryPrice + generateCapacity * 1000 * 71 * generatePrice;
+			$('#investment').val(investment);
+
+			var returnOfInvestment = Math.floor(investment / electricityPrice / 24 / 365);
+			returnOfInvestment = Math.round(returnOfInvestment / 7);
+			$('#returnOfInvestment').val(returnOfInvestment + ' years');
+		});
+
+		btn = document.getElementById("tips");
+		btn.addEventListener("click", function(e){
+
+			if(val <= 2){
+				// var p = document.createElement("p");
+				// p.appendChild(document.createTextNode("Low power usage!"));
+				// document.appendChild(p);
+				alert("Low power usage! You can use another rover");
+			}
+			else if(val === 3 || val === 4){
+				alert("Mid-range power usage for a Martian surface!");
+			}
+			else if(val > 4) {
+				alert("High power usage!");
+			}
+
+		});
+	</script>
+
+<!--  -->
+	<script src="{% static 'weather/scripts/jquery.min.js' %}"></script>
+    <script src="{% static 'weather/scripts/tether.min.js' %}"></script>
+    <script src="{% static 'weather/scripts/toolkit.js' %}"></script>
+    <script src="{% static 'weather/scripts/application.js' %}"></script>
+</body>
+</html>-
